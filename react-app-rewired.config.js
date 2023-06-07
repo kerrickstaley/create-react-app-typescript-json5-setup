@@ -18,4 +18,8 @@ module.exports = {
 
     return config;
   },
+  jest: (config) => {
+    config['transform']['^.+\\.json5?$'] = 'json5-jest';
+    return config;
+  },
 };
